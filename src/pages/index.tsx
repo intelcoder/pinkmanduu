@@ -33,6 +33,15 @@ const ShopNowBtn = styled.button`
   padding: 0 12px;
   height: 34px;
 `
+
+const IconContainer = styled.div`
+  margin-right: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 const Card = styled.section`
   width: max-content;
   background-color: #fdc6f6;
@@ -44,20 +53,31 @@ const Card = styled.section`
     flex-wrap: wrap;
   }
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  @media screen and (max-width: 475px) {
+    width: 100%;
+    > div {
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 314px) {
+    width: 100%;
+    > div {
+      justify-content: flex-start;
+    }
+    > div > div {
+      width: 100%;
+    }
+    ${IconContainer} {
+      width: 100%;
+      justify-content: flex-start;
+    }
+  }
 `
 const BodyContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-`
-
-const IconContainer = styled.div`
-  margin-right: 24px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `
 
 const TextSection = styled.div`
@@ -116,7 +136,7 @@ const IndexPage = () => {
                 <Title>Pink Manduu</Title>
                 <SocialContainer>
                   <a href='https://www.instagram.com/pink.manduu/' target='_blank'>
-                    <img src={InstaIcon} width={18} />
+                    <InstaIcon width={18} />
                   </a>
                 </SocialContainer>
               </TitleContainer>
