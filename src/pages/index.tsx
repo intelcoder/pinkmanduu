@@ -45,7 +45,7 @@ const IconContainer = styled.div`
 const Card = styled.section`
   width: max-content;
   background-color: #fdc6f6;
-  padding: 24px 24px 24px 12px;
+  padding: 32px 32px 32px 12px;
   margin: 16px;
   > div {
     display: flex;
@@ -57,6 +57,9 @@ const Card = styled.section`
     width: 100%;
     > div {
       justify-content: center;
+    }
+    ${IconContainer} {
+      margin-right: 32px;
     }
   }
   @media screen and (max-width: 314px) {
@@ -103,7 +106,6 @@ const Link = styled.a`
 `
 const SocialContainer = styled.div`
   display: flex;
-  // justify-content: flex-end !important;
 `
 
 const TitleContainer = styled.div`
