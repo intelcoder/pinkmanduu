@@ -54,6 +54,7 @@ const Card = styled.section`
   }
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   @media screen and (max-width: 475px) {
+    padding: 24px 24px 24px 12px;
     width: 100%;
     > div {
       justify-content: center;
@@ -96,13 +97,13 @@ const TextSection = styled.div`
 
 const Title = styled.div`
   font-weight: 600;
-
+  font-size: 18px;
   color: #6a1e6c;
 `
 
 const Link = styled.a`
   color: #522054;
-  font-size: 14px;
+  font-size: 16px;
 `
 const SocialContainer = styled.div`
   display: flex;
