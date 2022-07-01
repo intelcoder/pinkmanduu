@@ -139,7 +139,7 @@ const IndexPage = () => {
                 <Title>Pink Manduu</Title>
                 <SocialContainer>
                   <a href='https://www.instagram.com/pink.manduu/' target='_blank'>
-                    <InstaIcon width={18} />
+                    <InstaIcon width={20} />
                   </a>
                 </SocialContainer>
               </TitleContainer>
