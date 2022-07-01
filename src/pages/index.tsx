@@ -36,7 +36,7 @@ const ShopNowBtn = styled.button`
 const Card = styled.section`
   width: max-content;
   background-color: #fdc6f6;
-  padding: 24px 16px 24px 12px;
+  padding: 24px 24px 24px 12px;
   margin: 16px;
   > div {
     display: flex;
@@ -54,6 +54,10 @@ const BodyContainer = styled.div`
 
 const IconContainer = styled.div`
   margin-right: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const TextSection = styled.div`
@@ -61,10 +65,6 @@ const TextSection = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 12px 0;
-  > div {
-    display: flex;
-    flex-direction: column;
-  }
   > div a {
     line-height: 1.5;
     text-decoration: none;
@@ -73,7 +73,7 @@ const TextSection = styled.div`
 
 const Title = styled.div`
   font-weight: 600;
-  margin-bottom: 24px;
+
   color: #6a1e6c;
 `
 
@@ -83,8 +83,19 @@ const Link = styled.a`
 `
 const SocialContainer = styled.div`
   display: flex;
-  justify-content: flex-end !important;
-  width: 100%;
+  // justify-content: flex-end !important;
+`
+
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 24px;
+`
+
+const LinksContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `
 
 const IndexPage = () => {
@@ -98,23 +109,25 @@ const IndexPage = () => {
         <Card>
           <div>
             <IconContainer>
-              <img src={manduu} width={48} />
+              <img src={manduu} width={60} />
             </IconContainer>
             <TextSection>
-              <Title>Pink Manduu</Title>
-              <div>
+              <TitleContainer>
+                <Title>Pink Manduu</Title>
+                <SocialContainer>
+                  <a href='https://www.instagram.com/pink.manduu/' target='_blank'>
+                    <img src={InstaIcon} width={18} />
+                  </a>
+                </SocialContainer>
+              </TitleContainer>
+              <LinksContainer>
                 <Link href='https://pinkmanduu.com' target='_blank'>
                   pinkmanduu.com
                 </Link>
                 <Link href='mailto:pinkmanduu@gmail.com'>pinkmanduu@gmail.com</Link>
-              </div>
+              </LinksContainer>
             </TextSection>
           </div>
-          <SocialContainer>
-            <a href='https://www.instagram.com/pink.manduu/' target='_blank'>
-              <img src={InstaIcon} width={18} />
-            </a>
-          </SocialContainer>
         </Card>
       </BodyContainer>
     </Main>

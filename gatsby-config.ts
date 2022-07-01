@@ -1,6 +1,7 @@
 import type { GatsbyConfig } from "gatsby"
 
 const config: GatsbyConfig = {
+  pathPrefix: "/pinkmanduu.github.io",
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
   },
